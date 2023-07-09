@@ -4,26 +4,26 @@ function generatePassword() {
   if (userPasswordLength < 8 || userPasswordLength > 128 || isNaN(userPasswordLength)) {
     return "Invalid length"
   }
-  var userUpperCharacters = confirm("Do you want to have uppercase letters in your password?")
+  var userUpperCase = confirm("Do you want to have uppercase letters in your password?")
 
-  var userLowerCharacters = confirm("Do you want to have lowercase letters in your password?")
+  var userLowerCase = confirm("Do you want to have lowercase letters in your password?")
 
-  var userSpecialCharacters = confirm("Do you want to have special characters in your password?")
+  var userSpecialChara = confirm("Do you want to have special characters in your password?")
 
   var userNumbers = confirm("Do you want to have numbers in your password?")
 
-  if (!userLowerCharacters && !userUpperCharacters && !userSpecialCharacters && !userNumbers) {
+  if (!userLowerCase && !userUpperCase && !userSpecialChara && !userNumbers) {
     return "Invalid password"
   }
 
   var allcharacters = []
-  if (userLowerCharacters) {
+  if (userLowerCase) {
     allcharacters += "abcdefghijklmnopqrstuvwxyz"
   }
-  if (userUpperCharacters) {
+  if (userUpperCase) {
     allcharacters += "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
   }
-  if (userSpecialCharacters) {
+  if (userSpecialChara) {
     allcharacters += "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~"
   }
   if (userNumbers) {
